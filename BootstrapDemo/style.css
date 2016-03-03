@@ -1,0 +1,12 @@
+.s1,.s2,.s3 {
+padding: 20px;
+}
+
+.s1{
+	padding-top:70px;
+}
+
+.s4 img{
+	max-width: 100%;
+	height: auto;	
+}
