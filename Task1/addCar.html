@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brand Cars</title>
+	<!-- Latest compiled and minified CSS Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+	<link rel="stylesheet" type="text/css" href="style.css" /> 	
+		
+</head>
+<body onload="loadCarDetails()">
+
+  <!-- navbar -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand Cars</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="demo.html">Home</a></li>
+            <li><a href="addCar.html">Add Cars</a></li>
+            <li><a href="#contact">About Us</a></li>           
+          </ul>
+          <ul class="nav navbar-nav navbar-right">            
+            <li><a href="#">Sign In</a></li>
+          <ul>
+        </div><!--/.nav-collapse -->
+      </div>
+</nav>
+	
+
+ <div class="container"> 
+       
+        <div class="col-md-offset-3 col-md-5 s1">
+		
+		<h2> Car Details: </h2>
+		<hr />
+		
+
+				<form role="form" name="myForm" onsubmit="return(validate());">
+					<div class="form-group">
+					  <label for="text">Car Name:</label>
+					  <input type="text" class="form-control" name="carName" placeholder="Enter Car Name">
+					</div>	
+					<div class="form-group">
+					  <label for="number">Car Model:</label>
+					  <input type="number" min="1900" max="2016" class="form-control" name="carModel" placeholder="Enter Car Model">
+					</div>
+					<div class="form-group">
+					  <label for="text">Car Color:</label>
+					  <input type="text" class="form-control" name="carColor" placeholder="Enter Car Color">
+					</div>
+					<div class="form-group">
+					  <label for="number">Car Mileage:</label>
+					  <input type="number" min="5" max="25" class="form-control" name="carMileage" placeholder="Enter Car Mileage">
+					</div>
+					<div class="form-group">
+					  <label for="text">Car image:</label>
+					  <input type="text" class="form-control" name="carimage" placeholder="Enter Car image name">
+					</div>	
+					<br>					
+					<button type="submit" class="btn btn-primary">Submit Details</button>
+					<label id="validation"> </label>
+				</form>	
+		</div>	
+				       
+         </div>
+		 <hr />		
+   		 
+	 	
+ </div>
+ 
+ 
+    <!-- Bootstrap core JavaScript Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript Bootstrap.js-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+	<!-- Customise Script -->
+	 <script src="script.js"></script>
+
+</body>
+</html>
