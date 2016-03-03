@@ -1,17 +1,24 @@
 //Javascript file 
 
-var cars = '{"carDetails":[' +
-'{"carName":"Audi","carModel":"2012","carColor":"Red","carMileage":"10","carImg":"1.jpg" },' +
-'{"carName":"Skoda","carModel":"2013","carColor":"Grey","carMileage":"12","carImg":"2.jpg" },' +
-'{"carName":"BMW","carModel":"2014","carColor":"White","carMileage":"8","carImg":"3.jpg" }]}';
+var cars = {"carDetails":[
+		{"carName":"Audi","carModel":"2012","carColor":"Red","carMileage":"10","carImg":"1.jpg" },
+		{"carName":"Skoda","carModel":"2013","carColor":"Grey","carMileage":"12","carImg":"2.jpg" },
+		{"carName":"BMW","carModel":"2014","carColor":"White","carMileage":"8","carImg":"3.jpg" }
+	]
+}
 
 
-alert('start JON');
+console.log('start JON');
 
-var x=  localStorage.getItem("list_data_key");
-alert(x);
+var x=  localStorage.getItem("cars");
+if( x ){
+	cars = JSON.parse( x ) //restore app
+} else {
+	localStorage.setItem( 'cars', cars ) //initialise
+}
+console.log(x);
 
-alert('end');
+console.log('end');
 
 function loadCarDetails(){
 		
@@ -41,7 +48,7 @@ function loadCarDetails(){
 }
 
 function openCarInfo(id){
-  alert(id);
+  console.log(id);
 }
 
 // Add class script events
@@ -70,21 +77,20 @@ function openCarInfo(id){
             return false;
          }
 
-		alert(1);
+		console.log(1);
+		var car = {}
+		car.carName = document.myForm.carName.value;
+		car.carModel = document.myForm.carModel.value;
+		car.carColor = document.myForm.carColor.value;
+		car.carMileage = document.myForm.carMileage.value;
+		car.carimage = document.myForm.carimage.value;
 		
-		localStorage.carName = document.myForm.carName.value;
-		localStorage.carModel = document.myForm.carModel.value;
-		localStorage.carColor = document.myForm.carColor.value;
-		localStorage.carMileage = document.myForm.carMileage.value;
-		localStorage.carimage = document.myForm.carimage.value;
-		
-		var complexCardataJSON = [ localStorage.carName, localStorage.carModel, localStorage.carColor, localStorage.carMileage, localStorage.carimage ];
+		//add to global data
+		cars.push( car );
 		// store array data to the localstorage
-		localStorage.setItem("list_data_key",  JSON.stringify(complexCardataJSON));	
+		localStorage.setItem("cars",  JSON.stringify(cars));
 		
-		document.write(complexCardataJSON);	
-		
-		alert(2);		
+		console.log(2);		
         
       }
   
