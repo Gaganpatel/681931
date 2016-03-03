@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var cars = ["Saab", "Volvo", "BMW"];
+//document.getElementById("demo").innerHTML = cars[0];
+function loadOpt(){
+     for(i=0;i<cars.length;i++){
+
+var node = document.createElement("div");
+    var textnode = document.createTextNode(cars[i]);
+    node.appendChild(textnode)
+var node2=document.createElement("img");
+node2.setAttribute("width", "100px");
+    document.getElementById("sel1").appendChild(node);
+  
+}
+
+
+
+}
+function shwText(){
+var tex = document.getElementById("tex").value;
+cars.push(tex);
+var node = document.createElement("option");
+    var textnode = document.createTextNode(tex);
+    node.appendChild(textnode);
+    document.getElementById("sel").appendChild(node);
+
+}
+</script>
+<script>
+
+</script>
+</head>
+<body onload="loadOpt()" >
+<form id="sel1">
+<p id="demo"></p>
+
+
+
+<select id="sel"><option></option></select>
+
+<a href="#" onclick="shwText()"> Add </a>
+
+<input type="text" id="tex" ></input>
+</form>
+</body>
+</html>
+
