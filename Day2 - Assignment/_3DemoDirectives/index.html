@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html data-ng-app="tcsAppAngular">
+<head>
+	<title> Hello Angular! </title>
+	<script type="text/javascript" src="lib/angular.js"></script>	
+</head>
+
+<body data-ng-app="listApp">
+
+	Welcome to Demo State and Color;
+	<hr>
+	
+	<div data-ng-controller="listCtrl">
+	
+	<input type="button" value="Color" data-ng-click="setColor()">
+	<input type="button" value="State" data-ng-click="setState()">	
+	
+	<ul>
+		<li data-ng-repeat="value in getValues()">
+			{{value}}
+		</li>
+	<ul>
+	
+	</div>
+	
+	<script type="text/javascript" src="scripts/module.js"></script>
+	<script type="text/javascript" src="scripts/controller/controller.js"></script>
+	
+</body>
+</html>
