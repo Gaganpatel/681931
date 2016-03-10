@@ -1,0 +1,2 @@
+proxy = http://681743:Smar%402016@proxy.tcs.com:8080
+https-proxy = http://681743:Smar%402016@proxy.tcs.com:8080
